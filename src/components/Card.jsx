@@ -20,7 +20,7 @@ const Card = (props) => {
   return (
     <div className="w-[300px] bg-bgDark bg-opacity-80 min-h-min rounded-md overflow-hidden">
       <div className="relative">
-        <img src={course?.image?.url} alt="" />
+        <img src={course?.image?.url} alt="course-img" loading="lazy" />
         <div
           className="w-[40px] h-[40px] bg-white rounded-full flex justify-center items-center  absolute right-2 bottom-[-12px]"
           onClick={() => handleOnClick(course.id)}
