@@ -1,9 +1,10 @@
 import Navbar from "./components/Navbar";
 import Filter from "./components/Filter";
 import Cards from "./components/Cards";
-
+import Shimmer from "./components/Shimmer";
 import { filterData, apiUrl } from "./data";
 import { useEffect, useState } from "react";
+
 
 function App() {
   const [category, setCategory] = useState(filterData[0].title);
@@ -41,7 +42,7 @@ function App() {
         <div className="w-11/12 max-w-[1200px] mx-auto">
           {loading ? (
             <div className="text-3xl text-white font-bold flex items-center justify-center min-h-[50vh]">
-              Loading...
+              <Shimmer/>
             </div>
           ) : (
             <Cards courses={courses} category={category} />
