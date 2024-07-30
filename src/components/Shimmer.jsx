@@ -8,7 +8,7 @@ const Shimmer = () => {
 
             {
                 Array.from(new Array(9)).map((key, index) => {
-                    return <Card>
+                    return <Card className='rounded-md'>
                         <Skeleton variant="rounded" width={300} height={170} />
                         <Box sx={{ pt: 0.5 }}>
                             <Skeleton width="60%" />
